@@ -1,0 +1,39 @@
+body{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+svg{
+    margin: auto;
+}
+#my_circle{
+    stroke: green;
+    stroke-dasharray: 60px;
+    stroke-linecap: round;
+    stroke-width: 3px;
+    fill: none;
+    animation: animate 3s linear infinite;
+    transform-origin: center;
+}
+@keyframes animate{
+    0%{
+        stroke-dashoffset: 0px;
+        transform: rotateZ(0deg);
+    }
+    25%{
+        stroke-dashoffset: -60px;
+        stroke: yellow;
+    }
+    50%{
+        stroke-dashoffset: -120px;
+        stroke: red;
+    }
+    75%{
+        stroke-dashoffset: -180px;
+        stroke: blue;
+    }
+    100%{
+        stroke-dashoffset: -240px;
+        transform: rotateZ(360deg);
+    }
+}
